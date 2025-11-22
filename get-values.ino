@@ -1,5 +1,6 @@
 const int digitalPins[14] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 const int analogPins[6] = {A0, A1, A2, A3, A4, A5};
+const int deviceId = 20;
 
 #define numDigitalPins (sizeof(digitalPins)/sizeof(digitalPins[0]))
 #define numAnalogPins  (sizeof(analogPins)/sizeof(analogPins[0]))
@@ -32,7 +33,7 @@ void loop() {
 
 
 void readPins(int arrPins[], int size) {
-  String json = "{id: 01, data: [";
+  String json = "{id:" + String(deviceId) + ", pins: [";
 
   for (int i = 0; i < size; i++) {
     int pin = arrPins[i];
