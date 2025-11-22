@@ -32,7 +32,7 @@ void loop() {
 
 
 void readPins(int arrPins[], int size) {
-  String json = "[";
+  String json = "{id: 01, data: [";
 
   for (int i = 0; i < size; i++) {
     int pin = arrPins[i];
@@ -48,7 +48,7 @@ void readPins(int arrPins[], int size) {
     }
   }
 
-  json += "]";
+  json += "]}";
 
   Serial.println(json);
   delay(1000);
