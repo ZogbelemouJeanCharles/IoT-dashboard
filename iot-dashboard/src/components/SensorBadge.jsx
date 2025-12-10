@@ -1,16 +1,16 @@
+import Button from "react-bootstrap/Button";
+
 export default function SensorBadge({ id, onConfigure }) {
   return (
-    <button
+    <Button
+      variant="outline-primary"
       onClick={() => onConfigure(id)}
-      className="px-6 py-2 rounded-full border-2 border-[#2f318a] 
-                 text-[#2f318a] font-semibold text-sm 
-                 hover:bg-[#2f318a] hover:text-white 
-                 transition-all duration-300 ease-in-out 
-                 shadow-sm"
+      className="rounded-pill fw-semibold px-3 py-2"
     >
-      ID #{id}
-    </button>
+      ID #{id} <span className="ms-1">⚙️</span>
+    </Button>
   );
 }
+
 
 
